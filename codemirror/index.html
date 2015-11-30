@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Code blast plugin for Codemirror</title>
+		<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+		<link rel="stylesheet" href="codemirror/theme/blackboard.css">
+
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #222;
+		}
+
+		/* Codemirror */
+		.Codemirror {
+			width: 100%;
+			height: 100%;
+			font-size: 20px;
+		}
+
+		</style>
+	</head>
+
+	<body>
+
+	    <script src="codemirror/lib/codemirror.js"></script>
+	    <script src="code-blast.js"></script>
+
+	    <script>
+		window.cm = CodeMirror(document.body, {
+			lineNumbers: true,
+			theme: 'blackboard',
+			lineWrapping: true,
+			autofocus: true,
+			tabSize: 2,
+			value: "尝试写写吧",
+			autoCloseTags: true,
+			blastCode: { effect: 2 },
+		});
+	    </script>
+
+	</body>
+</html>
