@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>scheme test</title>
+		<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #222;
+		}
+
+		/* Codemirror */
+		.Codemirror {
+			width: 100%;
+			height: 100%;
+			font-size: 20px;
+		}
+
+		</style>
+	</head>
+
+	<body>
+	    <script src="index.js"></script>
+
+	    <script>
+		    nativeSchema.loadSchema({
+                // 某个schema协议，例如login,
+                schema: "http://h5.17kx.com/game/jump?gameid=5",
+            
+                //schema头协议，
+                protocal:"weixin",
+            
+                //发起唤醒请求后，会等待loadWaiting时间，超时则跳转到failUrl，默认3000ms
+                loadWaiting:"3000",
+            
+                //唤起失败时的跳转链接，默认跳转到应用商店下载页
+                failUrl:"http://h5.17kx.com/game/jump?gameid=5",
+            
+                // Android 客户端信息,可以询问 Android同事
+                apkInfo:{
+                    PKG:"",
+                    CATEGORY:"",
+                    ACTION:""
+                }
+            });
+	    </script>
+
+	</body>
+</html>
